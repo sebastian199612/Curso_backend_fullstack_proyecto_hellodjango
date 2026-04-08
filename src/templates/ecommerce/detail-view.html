@@ -1,0 +1,18 @@
+{% include 'ecommerce/messages.html' %}
+
+<h1>
+    {{ product.tittle }} - ${{ product.price }}
+</h1>
+
+<hr>
+
+<p>Vendedor: {{ product.seller }}</p>
+<p>Color: {{ product.color }}</p>
+<p>Dimensiones: {{ product.product_dimensions }}</p>
+<p>Descripción: {{ product.description }}</p>
+
+<hr>
+
+<a href="/ecommerce/">Volver al listado</a> | 
+<a href="/ecommerce/{{ product.id }}/edit/">Editar</a> | 
+<a href="/ecommerce/{{ product.id }}/delete/">Eliminar</a>

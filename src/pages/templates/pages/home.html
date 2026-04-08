@@ -1,0 +1,32 @@
+{% extends "layouts/index.html" %}
+{% load static %}
+
+{% block title %}Docker + Django{% endblock %}
+
+{% block body %}
+  <div class="flex justify-center pt-24 pb-12 px-2 sm:px-0">
+    <img src="{% static 'images/django.png' %}"
+         width="480" height="167" alt="Django logo" />
+  </div>
+
+  <p class="text-center text-lg mt-6">
+   🐳 Learn the Docker fundamentals at:
+    <strong>
+      <a class="border-b border-gray-900 mb-1" href="https://diveintodocker.com?ref=docker-django-example">https://diveintodocker.com</a>
+    </strong>
+  </p>
+  <div class="text-center">
+        <img src="{% static 'images/django.png' %}" width="160" alt="django logo">
+        
+<div style="background-color: #d4edda; border: 1px solid #c3e6cb; padding: 20px; border-radius: 10px; text-align: center;">
+    <h3 style="color: #155724;">🚀 Plataforma de Mini Influencers</h3>
+    
+    <p><strong>Empresa Cliente:</strong> {{ proyecto.empresa.nombre }}</p>
+    <p><strong>Sector:</strong> {{ proyecto.empresa.sector }}</p>
+    
+    <hr>
+    
+    <p><strong>Presupuesto en Custodia:</strong> ${{ proyecto.presupuesto }}</p>
+    <p><strong>Estado de Seguridad:</strong> {{ proyecto.estado }}</p>
+</div>
+{% endblock %}
