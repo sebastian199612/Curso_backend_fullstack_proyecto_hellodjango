@@ -27,10 +27,10 @@ urlpatterns = [
     path("products/<slug:slug>",ProductDetailView.as_view()),
     path("p/<int:pk>", ProductIDRedirectView.as_view()),
     path("p/<slug:slug>",ProductRedirectView.as_view()),
-    path("my-products/",ProtectedListView.as_view()),####
-    path("my-products/<slug:slug>",ProtectedProductDetailView.as_view()),
-    #path("my-products/create/", ProtectedProductCreateView.as_view()),
-    #path("my-products/<slug:slug>/", ProtectedProductUpdateView.as_view()),
-    #path("my-products/<slug:slug>/delete/", ProtectedProductDeleteView.as_view()),
+    #path("my-products/",ProtectedListView.as_view()),####
+    #path("my-products/<slug:slug>",ProtectedProductDetailView.as_view()),
+    path("my-products/create/", ProtectedProductCreateView.as_view()),
+    path("my-products/<slug:slug>/", ProtectedProductUpdateView.as_view()),
+    path("my-products/<slug:slug>/delete/", ProtectedProductDeleteView.as_view()),
 
     ]

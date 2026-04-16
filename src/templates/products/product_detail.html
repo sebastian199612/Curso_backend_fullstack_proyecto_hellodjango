@@ -8,3 +8,8 @@
 
 {{object.slug}}
 
+{% if form %}
+
+    {% include "forms.html" with form=form delete_url=object.get_delete_url %}
+
+{% endif %}
